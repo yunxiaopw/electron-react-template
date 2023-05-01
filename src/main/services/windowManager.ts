@@ -33,13 +33,13 @@ class MainInit {
   // 主窗口函数
   createMainWindow() {
     this.mainWindow = new BrowserWindow({
-      titleBarStyle: config.IsUseSysTitle ? 'default' : 'hidden',
+      titleBarStyle: config.IsUseSysTitle ? 'hidden' : 'default',
       height: 700,
       useContentSize: true,
       width: 1164,
       minWidth: 1366,
       show: false,
-      frame: config.IsUseSysTitle,
+      frame: !config.IsUseSysTitle,
       webPreferences: {
         sandbox: false,
         webSecurity: false,

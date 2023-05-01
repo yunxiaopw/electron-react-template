@@ -1,11 +1,12 @@
 import React from "react";
 import "./TitleBar.scss";
 
-function App() {
+function App(props: { title: string }) {
+
   return (
     <div
       className="SkyTitleBar"
-      style={{ height: process.env.IS_WEB ? "0px" : "40px" }}>阿斯顿</div>
+      style={{ height: process.env.IS_WEB ? "0px" : "40px" }}>{props.title}</div>
   );
 }
 

@@ -17,6 +17,6 @@ export default {
   DllFolder: '',
   HotUpdateFolder: 'update',
   UseStartupChart: true,
-  IsUseSysTitle: false,
+  IsUseSysTitle: true,
   BuiltInServerPort: 25565
 }

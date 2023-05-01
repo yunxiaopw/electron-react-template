@@ -60,13 +60,13 @@ export default {
     })
     ipcMain.handle('open-win', (event, arg) => {
       const ChildWin = new BrowserWindow({
-        titleBarStyle: config.IsUseSysTitle ? 'default' : 'hidden',
+        titleBarStyle: config.IsUseSysTitle ? 'hidden' : 'default',
         height: 700,
         useContentSize: true,
         width: 1140,
         autoHideMenuBar: true,
         minWidth: 842,
-        frame: config.IsUseSysTitle,
+        frame: !config.IsUseSysTitle,
         show: false,
         webPreferences: {
           sandbox: false,
