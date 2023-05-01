@@ -19,7 +19,7 @@ class MainInit {
   constructor() {
     this.winURL = winURL
     this.shartURL = loadingURL
-    if (process.env.NODE_ENV === 'development') {
+    // if (process.env.NODE_ENV === 'development') {
       menuconfig.push({
         label: '开发者设置',
         submenu: [{
@@ -28,7 +28,7 @@ class MainInit {
           role: 'toggledevtools'
         }]
       })
-    }
+    // }
   }
   // 主窗口函数
   createMainWindow() {
@@ -44,7 +44,8 @@ class MainInit {
         sandbox: false,
         webSecurity: false,
         // 如果是开发模式可以使用devTools
-        devTools: process.env.NODE_ENV === 'development',
+        // devTools: process.env.NODE_ENV === 'development',
+        devTools: true,
         // 在macos中启用橡皮动画
         scrollBounce: process.platform === 'darwin',
         preload: getPreloadFile('preload')

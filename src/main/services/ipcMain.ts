@@ -84,6 +84,7 @@ export default {
       if (process.env.NODE_ENV === 'development') {
         ChildWin.webContents.openDevTools({ mode: 'undocked', activate: true })
       }
+      console.log('children window url:', winURL + arg.url);
       ChildWin.loadURL(winURL + arg.url)
       ChildWin.once('ready-to-show', () => {
         ChildWin.show()

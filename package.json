@@ -4,7 +4,7 @@
   "author": "sky <https://github.com/umbrella22>",
   "description": "An electron-react project",
   "license": "MIT",
-  "main": "./dist/electron/main.js",
+  "main": "./dist/electron/main/main.js",
   "scripts": {
     "dev": "esno .electron-vite/dev-runner.ts",
     "build": "cross-env BUILD_TARGET=clean esno .electron-vite/build.ts",

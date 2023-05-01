@@ -28,7 +28,7 @@ const App: FC = () => {
 
   const handleOpen = () => {
     let data = {
-      url: '/'
+      url: ''
     }
     // @ts-ignore
     window.ipcRenderer.invoke('open-win', data)
