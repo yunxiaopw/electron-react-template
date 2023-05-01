@@ -1,8 +1,25 @@
-import React from "react";
+import React, { FC } from "react";
+import ExchangeSelect from "./module/exchangeSelect/ExchangeSelect"
+import OpenRule from "./module/openRule/OpenRule";
+import SettingModule from "./module/settingModule/settingModule";
+import "./Home.scss";
 
-const Home = () => {
+const Home: FC = () => {
     return (
-        <div>home</div>
+        <div className="ease-main-container">
+            <div className="top-container">
+                <div className="item">
+                    <ExchangeSelect />
+                </div>
+                <div className="item">
+                    <OpenRule />
+                </div>
+                <div className="item">
+                    <SettingModule />
+                </div>
+            </div>
+            <div className="main-container"></div>
+        </div>
     )
 }
 
