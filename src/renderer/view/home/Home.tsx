@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import ExchangeSelect from "./module/exchangeSelect/ExchangeSelect"
 import OpenRule from "./module/openRule/OpenRule";
 import SettingModule from "./module/settingModule/SettingModule";
+import TableList from "./module/tableList/TableList";
 import "./Home.scss";
 
 const Home: FC = () => {
@@ -18,7 +19,9 @@ const Home: FC = () => {
                     <SettingModule />
                 </div>
             </div>
-            <div className="main-container"></div>
+            <div className="main-container">
+                <TableList />
+            </div>
         </div>
     )
 }

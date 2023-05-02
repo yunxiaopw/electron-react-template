@@ -14,11 +14,11 @@ code {
     monospace;
 }
 
-:where(.css-dev-only-do-not-override-7pgy9v).ant-checkbox {
+.ant-checkbox {
   top: 4px !important;
 }
 
-:where(.css-dev-only-do-not-override-7pgy9v).ant-checkbox+span {
+.ant-checkbox+span {
   padding-inline-start: 5px;
   padding-inline-end: 5px;
 }
