@@ -11,7 +11,7 @@ const OpenRule: FC = () => {
         <div className="ease-open-rule">
             <div className="title">
                 <div className="line"></div>
-                <div className="name">交易选择区</div>
+                <div className="name">开平仓规则</div>
             </div>
             <div className="container-wrap">
                 <div className="item">

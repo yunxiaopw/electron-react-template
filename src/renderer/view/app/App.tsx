@@ -15,7 +15,8 @@ const App: FC = () => {
     <ConfigProvider 
       theme={{
         token: {
-          fontSize: 12
+          fontSize: 12,
+          colorPrimary: '#4285F4'
         }
       }}
     >

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import ExchangeSelect from "./module/exchangeSelect/ExchangeSelect"
 import OpenRule from "./module/openRule/OpenRule";
-import SettingModule from "./module/settingModule/settingModule";
+import SettingModule from "./module/settingModule/SettingModule";
 import "./Home.scss";
 
 const Home: FC = () => {
