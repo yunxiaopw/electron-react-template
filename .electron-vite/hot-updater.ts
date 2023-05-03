@@ -25,7 +25,7 @@ const hash = (data, type = 'sha256') => {
 
 const createZip = (filePath: string, dest: string) => {
   const zip = AdmZip()
-  zip.addLocalFolder(filePath, "", null)
+  zip.addLocalFolder(filePath, "", null, null)
   zip.toBuffer()
   zip.writeZip(dest, null)
 }
