@@ -202,9 +202,7 @@ function unionBuild(archTag: Map<Platform, Map<Arch, Array<string>>>) {
 async function preBuild(): Promise<void> {
   // eslint-disable-next-line no-underscore-dangle
   let _arch = arch || '';
-  if (arch && !platformOptional().includes(arch.trim().toLowerCase())) {
-    _arch = await question();
-  }
+  if (!arch) _arch = await question()
 
   let archTag: null | Map<Platform, Map<Arch, Array<string>>> = null;
 
