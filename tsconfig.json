@@ -27,9 +27,5 @@
     "typeRoots": ["node_modules/@types", "customTypes/*"],
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".eslintrc.js"
-  ]
+  "include": ["src/**/*", "customTypes/**/*", "config/**/*", ".electron-vite"],
 }

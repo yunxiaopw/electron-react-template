@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import ExchangeSelect from "./module/exchangeSelect/ExchangeSelect";
-import OpenRule from "./module/openRule/OpenRule";
-import SettingModule from "./module/settingModule/SettingModule";
-import TableList from "./module/tableList/TableList";
-import "./Home.scss";
+import React, { FC } from 'react';
+import ExchangeSelect from './module/exchangeSelect/ExchangeSelect';
+import OpenRule from './module/openRule/OpenRule';
+import SettingModule from './module/settingModule/SettingModule';
+import TableList from './module/tableList/TableList';
+import './Home.scss';
 
 const Home: FC = () => {
   return (

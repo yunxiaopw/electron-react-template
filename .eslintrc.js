@@ -36,6 +36,8 @@ module.exports = {
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/no-shadow": "off"
+    "@typescript-eslint/no-shadow": "off",
+    "no-nested-ternary": "off",
+    "@typescript-eslint/naming-convention": "off",
   },
 };
