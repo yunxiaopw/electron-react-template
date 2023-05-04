@@ -14,7 +14,8 @@ import { errorLog, doneLog } from './log';
 
 process.env.NODE_ENV = 'production';
 
-const [, , arch] = process.argv;
+console.log('process.argv', process.argv)
+const [, , platform] = process.argv;
 const EOL = process.platform === 'win32' ? '\r\n' : '\n';
 
 const mainOpt = rollupOptions(process.env.NODE_ENV, 'main');
@@ -76,7 +77,7 @@ const winQuestion = async (): Promise<string> =>
     .prompt({
       type: 'list',
       name: 'platform',
-      message: 'Please select win package',
+      message: 'Please select win arch',
       choices: winOptional,
       default: 'win-any',
     })
@@ -201,12 +202,13 @@ function unionBuild(archTag: Map<Platform, Map<Arch, Array<string>>>) {
 
 async function preBuild(): Promise<void> {
   // eslint-disable-next-line no-underscore-dangle
-  let _arch = arch || '';
-  if (!arch) _arch = await question()
+  let _platform = '';
+  if (platform) !platformOptional().includes(platform.trim().toLowerCase()) ? (_platform = await question()) : _platform = platform
+  else _platform = await question()
 
   let archTag: null | Map<Platform, Map<Arch, Array<string>>> = null;
 
-  switch (_arch) {
+  switch (_platform) {
     case 'web':
       return web();
     case 'win':
@@ -231,7 +233,6 @@ async function preBuild(): Promise<void> {
       (buildConfig as any).linux.target = await linuxQuestion();
       break;
     default:
-      _arch = await question();
       break;
   }
   if (archTag) unionBuild(archTag);
