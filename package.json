@@ -1,7 +1,7 @@
 {
   "name": "electron-react-template",
   "version": "0.0.1",
-  "author": "sky <https://github.com/umbrella22>",
+  "author": "云霄",
   "description": "An electron-react project",
   "license": "MIT",
   "main": "./dist/electron/main/main.js",

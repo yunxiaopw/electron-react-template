@@ -21,7 +21,7 @@ const App = () => {
       }}
     >
       <div className="ease-app">
-        <TitleBar title="现现对冲" />
+        <TitleBar title="header" />
         <main className="ease-main">
           <HashRouter>
             <RouteElement />
