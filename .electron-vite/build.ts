@@ -14,7 +14,6 @@ import { errorLog, doneLog } from './log';
 
 process.env.NODE_ENV = 'production';
 
-console.log('process.argv', process.argv)
 const [, , platform] = process.argv;
 const EOL = process.platform === 'win32' ? '\r\n' : '\n';
 
